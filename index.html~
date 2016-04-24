@@ -15,10 +15,12 @@
 
     <div class='example-chat-toolbar'>
         <label for="nameInput">Username:</label>
-        <label for="pwdInput">Password:</label>
         <input type='text' id='nameInput' placeholder='enter an email...'>
-        <input type='text' id='pwdInput' placeholder='enter a password...'>
+        
     </div>
+    <div>
+     <label for="pwdInput">Password:</label>
+     <input type='text' id='pwdInput' placeholder='enter a password...'>
 </div>
 
 <!-- CHAT JAVASCRIPT -->
