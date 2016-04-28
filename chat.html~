@@ -15,13 +15,13 @@
 
     <div class='example-chat-toolbar'>
         <label for="nameInput">Username:</label>
-        <input type='text' id='nameInput' placeholder='enter a username...'>
+        <input type='text' id='' placeholder='enter a username...'>
     </div>
 
     <ul id='example-messages' class="example-chat-messages"></ul>
 
     <footer>
-        <input type='text' id='messageInput'  placeholder='Talk to me...'>
+        <input type='text' id='messageInput'  placeholder='Type 4 messages...'>
     </footer>
 </div>
 
