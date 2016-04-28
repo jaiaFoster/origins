@@ -18,7 +18,7 @@
         <input type='text' id='nameInput' placeholder='enter an email...'>
         
     </div>
-    <div>
+    <div class='example-chat-toolbar'>
      <label for="pwdInput">Password:</label>
      <input type='text' id='pwdInput' placeholder='enter a password...'>
 </div>
