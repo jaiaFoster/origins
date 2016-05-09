@@ -6,21 +6,26 @@
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
     <!-- load our CSS file which ets us change the way the HTML looks, is colored, and responds -->
     <link rel="stylesheet" type="text/css" href="example.css">
-</head>
-<body>
-
+    <script src="/js/bootstrap.js"></script>
+    <link rel= "stylesheet" type="text/css" href="css/bootstrap.min.css">
+    </head>
+    <body>
 <!-- CHAT MARKUP -->
 <div class="example-chat l-demo-container">
-    <header>jaiaChat!</header>
-
+    <header>Jaia Chat!</header>
     <div class='example-chat-toolbar'>
         <label for="nameInput">Username:</label>
         <input type='text' id='nameInput' placeholder='enter an email...'>
-        
     </div>
-    <div class='example-chat-toolbar'>
+ 	 <div class='example-chat-toolbar'>
      <label for="pwdInput">Password:</label>
      <input type='text' id='pwdInput' placeholder='enter a password...'>
+   </div>
+
+		<div class="alert" style="display:none;" id="errEmail">
+         			<button type="button" class="close" data-dismiss="alert">&times;</button>
+         			<strong>Warning!</strong> Please enter a valid email adress.
+  		</div>
 </div>
 
 <!-- CHAT JAVASCRIPT -->
@@ -47,7 +52,13 @@
         //FIELD VALUES
         var username = nameField.val();
         var pwd = pwdField.val();
-
+        var re =/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/; 
+		  if (username == '' || !username.match(re))
+			{
+ 				$("#errEmail").show();
+   		 		return false;
+			}
+			
         ref.authWithPassword({
             email    : nameField.val(),
             password : pwdField.val()
