@@ -13,12 +13,15 @@
 <div class="example-chat l-demo-container">
     <header>Jaia Chat!</header>
     <ul id='example-messages' class="example-chat-messages"></ul>
-
-    <footer>
+ 		
+    <footer>1
         <input type='text' id='messageInput'  placeholder='Type a message...'>
     </footer>
 </div>
-
+<div>
+ 		<label for="nameInput">Username:</label>
+        <input type='text' id='nameInput' placeholder='enter a username'>
+    </div>
 <!-- CHAT JAVASCRIPT -->
 <script>
     // CREATE A REFERENCE TO FIREBASE
@@ -27,6 +30,10 @@
     // REGISTER DOM ELEMENTS
     var messageField = $('#messageInput');
     var nameField = $('#nameInput');
+     if (username == undefined) {
+                username = 'Anonymous';
+            }
+
     var messageList = $('#example-messages');
 
     var myChatName = location.search.split('username=')[1];

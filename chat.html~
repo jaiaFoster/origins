@@ -22,11 +22,15 @@
 <!-- CHAT JAVASCRIPT -->
 <script>
     // CREATE A REFERENCE TO FIREBASE
-    var messagesRef = new Firebase('https://jaiachat.firebaseio-demo.com/');
+    var messagesRef = new Firebase("https://jaiachat-io.firebaseio.com");
 
     // REGISTER DOM ELEMENTS
     var messageField = $('#messageInput');
     var nameField = $('#nameInput');
+     if (username == undefined) {
+                username = 'Anonymous';
+            }
+
     var messageList = $('#example-messages');
 
     var myChatName = location.search.split('username=')[1];
@@ -40,6 +44,9 @@
         if (e.keyCode == 13) {
             //FIELD VALUES
             var username = nameField.val();
+            if (username == undefined) {
+                username = 'Anonymous';
+            }
             var message = messageField.val();
 
             //SAVE DATA TO FIREBASE AND EMPTY FIELD
@@ -62,7 +69,7 @@
         messageElement.text(message).prepend(nameElement);
 
         //ADD MESSAGE
-        messageList.append(messageElement)
+        messageList.append(messageElement);
 
         //SCROLL TO BOTTOM OF MESSAGE LIST
         messageList[0].scrollTop = messageList[0].scrollHeight;
