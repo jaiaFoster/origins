@@ -15,7 +15,7 @@
     <ul id='example-messages' class="example-chat-messages"></ul>
  		  <label for="nameInput">Username:</label>
         <input type='text' id='nameInput' placeholder='enter a username'>
-    <footer>1
+    <footer>
         <input type='text' id='messageInput'  placeholder='Type a message...'>
     </footer>
 </div>
