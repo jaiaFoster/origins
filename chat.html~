@@ -27,9 +27,6 @@
     // REGISTER DOM ELEMENTS
     var messageField = $('#messageInput');
     var nameField = $('#nameInput');
-     if (username == undefined) {
-                username = 'Anonymous';
-            }
 
     var messageList = $('#example-messages');
 
