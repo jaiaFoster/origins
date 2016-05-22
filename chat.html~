@@ -67,9 +67,9 @@
         nameField.val(myChatName);     
   }
     }
-      }
+      })
         }
-          }
+          })
 </script>
 </body>
 </html>
