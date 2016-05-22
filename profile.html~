@@ -9,16 +9,4 @@
     <script src="/js/bootstrap.js"></script>
     <link rel= "stylesheet" type="text/css" href="css/bootstrap.min.css">
     </head>
-    <header>name</header>
-    
-    <script type="text/javascript" >
-    var name == nameField.val();
-    
-    
-    
-    
-    
-    </script>
-    
     </html>
-    
